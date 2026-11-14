@@ -37,9 +37,15 @@ public class Player : MonoBehaviour
             isBuilding = false;
         }
 
-        if (Input.GetMouseButtonDown(1)) {
-            if (isBuilding) isBuilding = false;
-            if (!isBuilding)
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (isBuilding)
+            {
+                isBuilding = false;
+                Destroy(instance);
+                instance = null;
+            }
+            else
             {
                 canShoot = false;
                 isBuilding = true;
