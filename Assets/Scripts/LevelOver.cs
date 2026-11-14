@@ -20,7 +20,6 @@ public class LevelOver : MonoBehaviour
 
     public void NextLevel()
     {
-        Debug.Log(PlayerPrefs.GetInt("currentLevel", 1) + 1);
         SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel", 1) + 1);
     }
 
