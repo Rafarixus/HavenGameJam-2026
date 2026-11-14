@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         PlayerPrefs.SetInt("currentLevel", currentLevel);
-        PlayerPrefs.SetInt(currentLevel + "_highscore", 0);
+        PlayerPrefs.SetFloat(currentLevel + "_highscore", time);
         finishUI.GetComponent<LevelOver>().whatever();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

@@ -13,13 +13,14 @@ public class LevelOver : MonoBehaviour
     public void whatever()
     {
         timeText.text = GameManager.Instance.GetTime().ToString("F2");
-        highscoreText.text = PlayerPrefs.GetInt(GameManager.Instance.currentLevel + "_highscore", 0).ToString();
+        highscoreText.text = PlayerPrefs.GetFloat(GameManager.Instance.currentLevel + "_highscore", 0).ToString();
         triesText.text = PlayerPrefs.GetInt(GameManager.Instance.currentLevel + "_tries", 0).ToString();
         wallsText.text = PlayerPrefs.GetInt(GameManager.Instance.currentLevel + "_walls", 0).ToString();
     }
 
     public void NextLevel()
     {
+        Debug.Log(PlayerPrefs.GetInt("currentLevel", 1) + 1);
         SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel", 1) + 1);
     }
 
