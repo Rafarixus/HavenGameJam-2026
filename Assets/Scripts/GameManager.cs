@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private float time;
     private bool shooting;
     private Camera playerCamera;
+    private GameObject currentBall;
 
     private void Awake()
     {
@@ -35,8 +36,9 @@ public class GameManager : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject newBall = Instantiate(ballPrefab, shootPosition.transform.position + player.transform.forward.normalized, player.transform.rotation);
-        Rigidbody rb = newBall.GetComponent<Rigidbody>();
+        if (currentBall) Destroy(currentBall);
+        currentBall = Instantiate(ballPrefab, shootPosition.transform.position + player.transform.forward.normalized, player.transform.rotation);
+        Rigidbody rb = currentBall.GetComponent<Rigidbody>();
         Vector3 direction = player.transform.forward.normalized * strength;
         rb.AddForce(direction);
         time = 0;
