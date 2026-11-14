@@ -20,6 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LEVELS_FINAL/Tut3.unity
     guid: f5da23d7c7e405e4d95b151c00c79823
+  - enabled: 1
+    path: Assets/Scenes/LEVELS_FINAL/Tut4.unity
+    guid: 5ef069d97df0f00449176c30cfdb5f9a
+  - enabled: 1
+    path: Assets/Scenes/LEVELS_FINAL/Tut5.unity
+    guid: 979336da673ddba4397ebba8f54e428a
+  - enabled: 1
+    path: Assets/Scenes/LEVELS_FINAL/Tut6.unity
+    guid: 62190402530da4e438ca3eebcb1289c5
+  - enabled: 1
+    path: Assets/Scenes/LEVELS_FINAL/Tut7.unity
+    guid: 303e22418a0a20c45bc79559e68ccfd4
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
