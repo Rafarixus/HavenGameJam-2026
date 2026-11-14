@@ -2,16 +2,25 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity;
-    private float mouseX;
-    private float mouseY;
+    public float mouseSensitivity = 2f;
 
-    // Update is called once per frame
+    private float xRotation = 0f;
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     void Update()
     {
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        transform.Rotate(-mouseY * mouseSensitivity, mouseX * mouseSensitivity, 0);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        transform.parent.Rotate(0, mouseX, 0);
     }
 }
