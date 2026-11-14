@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         GameObject newBall = Instantiate(ballPrefab, shootPosition.transform.position + player.transform.forward.normalized, player.transform.rotation);
         Rigidbody rb = newBall.GetComponent<Rigidbody>();
-        Vector3 direction = playerCamera.transform.forward.normalized * strength;
+        Vector3 direction = player.transform.forward.normalized * strength;
         rb.AddForce(direction);
         time = 0;
         shooting = true;
