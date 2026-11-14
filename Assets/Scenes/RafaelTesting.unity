@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3634ded8f9da40921045758228734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  ballPrefab: {fileID: 7586007012418500483, guid: 7b00b80dd4ac2f645b76bccf002d851e, type: 3}
+  ballPrefab: {fileID: 2575595181029799796, guid: fff2b030ec7a60b4eae4f45b9a8714cd, type: 3}
   strength: 250
   player: {fileID: 2016152130}
   shootPosition: {fileID: 141455690}
