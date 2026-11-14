@@ -47,5 +47,5 @@ MonoBehaviour:
   music: {fileID: 8300000, guid: 4ed727243e58a4e6a906d701327c15f6, type: 3}
   shoot: {fileID: 8300000, guid: 1151030283a434000a5c4dcd771b0967, type: 3}
   finish: {fileID: 8300000, guid: 44993e93c0e794db481360376c80cf52, type: 3}
-  musicVolume: 0.2
+  musicVolume: 0.45
   effectsVolume: 0.8
