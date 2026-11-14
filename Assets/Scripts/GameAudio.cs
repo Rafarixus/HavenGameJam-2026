@@ -6,7 +6,7 @@ public class GameAudio : MonoBehaviour
     [SerializeField] private AudioClip music;
     [SerializeField] private AudioClip shoot;
     [SerializeField] private AudioClip finish;
-    [SerializeField, Range(0f, 1f)] private float musicVolume = 0.2f;
+    [SerializeField, Range(0f, 1f)] private float musicVolume = 0.45f;
     [SerializeField, Range(0f, 1f)] private float effectsVolume = 0.8f;
 
     private static GameAudio instance;
