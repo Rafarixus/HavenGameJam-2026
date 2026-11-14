@@ -1306,9 +1306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   ballPrefab: {fileID: 2575595181029799796, guid: fff2b030ec7a60b4eae4f45b9a8714cd, type: 3}
-  strength: 250
+  strength: 100
   player: {fileID: 2016152130}
   shootPosition: {fileID: 141455690}
+  finishUI: {fileID: 0}
 --- !u!4 &1124902912
 Transform:
   m_ObjectHideFlags: 0
