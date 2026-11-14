@@ -11,7 +11,7 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Finish"))
         {
-            GameManager.Instance.shooting = false;
+            GameManager.Instance.Finish();
         }
     }
 }
