@@ -3,6 +3,7 @@ using UnityEngine;
 public class BallStart : MonoBehaviour
 {
     public Rigidbody ball;
+    public float force = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
