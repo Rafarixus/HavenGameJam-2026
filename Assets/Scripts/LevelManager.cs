@@ -5,6 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public void StartGame()
     {
+        if (PlayerPrefs.GetInt("currentLevel", 1) == 0) PlayerPrefs.SetInt("currentLevel", 1);
         SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel", 1));
     }
 
