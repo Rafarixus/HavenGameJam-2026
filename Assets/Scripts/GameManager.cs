@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     private bool shooting;
     private Camera playerCamera;
 
+    public GameObject finishUI;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
 
         Physics.IgnoreLayerCollision(3, 6);
+
+        finishUI.SetActive(false);
     }
 
     private void Update()
@@ -51,5 +55,6 @@ public class GameManager : MonoBehaviour
     public void Finish()
     {
         shooting = false;
+        finishUI.SetActive(true);
     }
 }
