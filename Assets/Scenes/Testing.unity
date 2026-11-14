@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1948,6 +1948,8 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1214401840}
   - {fileID: 1058997862}
+  - {fileID: 1804372936}
+  - {fileID: 758696870}
   - {fileID: 44032470}
   - {fileID: 824164147}
   - {fileID: 761027642}
