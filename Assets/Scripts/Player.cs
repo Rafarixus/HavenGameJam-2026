@@ -49,7 +49,13 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 instance.transform.position = hit.point;
+                instance.transform.rotation = Quaternion.LookRotation(hit.normal) * Quaternion.Euler(90f, 0f, 0f);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && isBuilding)
+        {
+            instance.transform.Rotate(0f, 45f, 0f);
         }
 
         if (Input.GetMouseButtonDown(0) && isBuilding)
