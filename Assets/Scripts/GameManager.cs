@@ -58,5 +58,7 @@ public class GameManager : MonoBehaviour
     {
         shooting = false;
         finishUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
