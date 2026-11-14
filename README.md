@@ -12,7 +12,6 @@ The game focuses on aiming, experimenting with different shots, and figuring out
 - Left mouse click to shoot
 - Right mouse click to open or close the build mode
 - Left click when in build mode to place
-- Scroll when in build mode to switch items
 - ESC to get back to the main menu
 
 ## Development
