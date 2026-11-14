@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         if (shooting) time = time + Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetMouseButtonDown(0) && player.GetComponent<Player>().canShoot)
         {
             Shoot();
         }

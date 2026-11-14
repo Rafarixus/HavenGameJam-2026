@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        transform.position = GameManager.Instance.shootPosition.transform.position;
+        canShoot = true;
     }
 
     private void Update()
