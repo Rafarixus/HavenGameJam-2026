@@ -9,7 +9,7 @@ public class UIUpdater : MonoBehaviour
     {
         if (GameManager.Instance)
         {
-            timeText.text = GameManager.Instance.time.ToString();
+            timeText.text = GameManager.Instance.time.ToString("F2");
         }
     }
 }
