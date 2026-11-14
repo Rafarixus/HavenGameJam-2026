@@ -1429,6 +1429,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 36580843a303d3d418b1d46a7d10cdc7, type: 3}
   m_PrefabInstance: {fileID: 2128075773}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1231364660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cd016f5e676e8934997ae5e8c40b607c, type: 3}
+  m_PrefabInstance: {fileID: 1670071044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1241191047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2325,13 +2330,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd016f5e676e8934997ae5e8c40b607c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1670071048}
   m_SourcePrefab: {fileID: 100100000, guid: cd016f5e676e8934997ae5e8c40b607c, type: 3}
 --- !u!4 &1670071045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cd016f5e676e8934997ae5e8c40b607c, type: 3}
   m_PrefabInstance: {fileID: 1670071044}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1670071048
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231364660}
+  m_Material: {fileID: 13400000, guid: 76e30d0ab9cda9a40ab3222899830fc7, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2012365008449162871, guid: cd016f5e676e8934997ae5e8c40b607c, type: 3}
 --- !u!1001 &1849047262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2706,8 +2736,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016152130}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04238878, y: -0.7676482, z: 0.0510376, w: 0.63742816}
-  m_LocalPosition: {x: -4.630027, y: 0.6896411, z: -8.74238}
+  m_LocalRotation: {x: 0.2136623, y: -0.78071153, z: 0.35889915, w: 0.46478954}
+  m_LocalPosition: {x: -1.9539809, y: 3.7046375, z: -9.816048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2727,7 +2757,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 5
   canShoot: 0
+  isBuilding: 0
   mouseSensitivity: 2
+  prefab: {fileID: 762362634456593929, guid: af47854b26bd5cd44a76c758baf03861, type: 3}
 --- !u!1001 &2060157734
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -31,11 +31,6 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (shooting) time = time + Time.deltaTime;
-
-        if (Input.GetMouseButtonDown(0) && player.GetComponent<Player>().canShoot)
-        {
-            Shoot();
-        }
     }
 
     public void Shoot()
