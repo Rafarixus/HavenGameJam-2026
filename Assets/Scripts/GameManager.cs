@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         Rigidbody rb = currentBall.GetComponent<Rigidbody>();
         Vector3 direction = player.transform.forward.normalized * strength;
         rb.AddForce(direction);
+        GameAudio.PlayShoot();
         time = 0;
         shooting = true;
     }
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void Finish()
     {
+        GameAudio.PlayFinish();
         shooting = false;
         finishUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
