@@ -93,6 +93,6 @@ public class Player : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        if (mouseX != 0 || mouseY != 0) transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
     }
 }
