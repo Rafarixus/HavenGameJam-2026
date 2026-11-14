@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private bool shooting;
     private Camera playerCamera;
     private GameObject currentBall;
+    public int currentLevel;
 
     public GameObject finishUI;
 
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     public void Shoot()
     {
+        PlayerPrefs.SetInt(currentLevel + "_tries", PlayerPrefs.GetInt(currentLevel + "_tries", 0) + 1);
         if (currentBall) Destroy(currentBall);
         currentBall = Instantiate(ballPrefab, shootPosition.transform.position + player.transform.forward.normalized, player.transform.rotation);
         Rigidbody rb = currentBall.GetComponent<Rigidbody>();
@@ -60,5 +62,11 @@ public class GameManager : MonoBehaviour
         finishUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        PlayerPrefs.SetInt("currentLevel", currentLevel);
+        PlayerPrefs.SetInt(currentLevel + "_highscore", 0);
+        finishUI.GetComponent<LevelOver>().whatever();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        player.GetComponent<Player>().enabled = false;
     }
 }

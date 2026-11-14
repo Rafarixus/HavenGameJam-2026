@@ -3,42 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void StartGame()
     {
-        
+        SceneManager.LoadScene(PlayerPrefs.GetInt("currentLevel", 1));
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadLevel(int id)
     {
-        
-    }
-    public void StartGame() {
-        SceneManager.LoadScene(1);
-    }
-    public void Level1() {
-        SceneManager.LoadScene(1);
-    }
-    public void Level2() {
-        SceneManager.LoadScene(2);
-    }
-    public void Level3() {
-        SceneManager.LoadScene(3);
-    }
-    public void Level4() {
-        SceneManager.LoadScene(4);
-    }
-    public void Level5() {
-        SceneManager.LoadScene(5);
-    }
-    public void Level6() {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(id);
     }
     public void MainMenu() {
         SceneManager.LoadScene(0);
     }
     public void Quit() {
         Application.Quit();
+    }
+    public void ReloadScene()
+    {
+        LoadLevel(GameManager.Instance.currentLevel);
     }
 }
