@@ -1609,6 +1609,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2003418520}
     - target: {fileID: 3939106910253969709, guid: 31bb9b1073136ee4aab1153b6c601022, type: 3}
+      propertyPath: strength
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939106910253969709, guid: 31bb9b1073136ee4aab1153b6c601022, type: 3}
       propertyPath: shootPosition
       value: 
       objectReference: {fileID: 237800755}
