@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BallStart : MonoBehaviour
 {
-    public Rigidbody ball;
+    public GameObject ball;
     public float force = 5f;
     public Camera playerCamera;
 
@@ -12,13 +12,13 @@ public class BallStart : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Vector3 force = new Vector3(0, 0, 5);
-            ball.AddForce(force, ForceMode.Impulse);
-        }
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.G))
+    //    {
+    //        Vector3 force = new Vector3(0, 0, 5);
+    //        ball.AddForce(force, ForceMode.Impulse);
+    //    }
+    //}
 }
