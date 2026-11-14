@@ -67,9 +67,9 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && isBuilding)
         {
             isBuilding = false;
-            instance = null;
-
+            instance.layer = 0;
             PlayerPrefs.SetInt(GameManager.Instance.currentLevel + "_walls", PlayerPrefs.GetInt(GameManager.Instance.currentLevel + "_walls", 0) + 1);
+            instance = null;
         }
 
         if (vertical != 0 || horizontal != 0 || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.E))

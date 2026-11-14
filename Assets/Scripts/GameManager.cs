@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        strength = 250f;
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
