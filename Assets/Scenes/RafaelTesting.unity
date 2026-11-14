@@ -861,7 +861,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d949e0f994db26b4eb5d661c715fbdc4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1326555328}
   m_SourcePrefab: {fileID: 100100000, guid: d949e0f994db26b4eb5d661c715fbdc4, type: 3}
 --- !u!4 &712893228 stripped
 Transform:
@@ -1752,6 +1755,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1222502973562674349, guid: c61ea0fa5991e7044a5a17f4a1f13f3a, type: 3}
+--- !u!1 &1326555325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d949e0f994db26b4eb5d661c715fbdc4, type: 3}
+  m_PrefabInstance: {fileID: 712893227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1326555328
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326555325}
+  m_Material: {fileID: 13400000, guid: 76e30d0ab9cda9a40ab3222899830fc7, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3580940189889145108, guid: d949e0f994db26b4eb5d661c715fbdc4, type: 3}
 --- !u!1001 &1328976391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2845,7 +2875,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060157736}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 76e30d0ab9cda9a40ab3222899830fc7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2971,6 +3001,6 @@ SceneRoots:
   - {fileID: 1541147748}
   - {fileID: 1570399230}
   - {fileID: 64188661}
-  - {fileID: 1124902912}
   - {fileID: 799055401}
   - {fileID: 2016152134}
+  - {fileID: 1124902912}
