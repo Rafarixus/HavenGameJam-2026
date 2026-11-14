@@ -1097,6 +1097,7 @@ MonoBehaviour:
   strength: 1000
   player: {fileID: 337263284}
   shootPosition: {fileID: 1876235597}
+  currentLevel: 1
   finishUI: {fileID: 1049209298}
 --- !u!1 &1083790665 stripped
 GameObject:

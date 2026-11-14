@@ -1802,9 +1802,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c61ea0fa5991e7044a5a17f4a1f13f3a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 398018668}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c61ea0fa5991e7044a5a17f4a1f13f3a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 398018667}
   m_SourcePrefab: {fileID: 100100000, guid: c61ea0fa5991e7044a5a17f4a1f13f3a, type: 3}
 --- !u!4 &398018665 stripped
 Transform:
@@ -1816,28 +1813,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c61ea0fa5991e7044a5a17f4a1f13f3a, type: 3}
   m_PrefabInstance: {fileID: 398018664}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &398018667
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398018666}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1222502973562674349, guid: c61ea0fa5991e7044a5a17f4a1f13f3a, type: 3}
 --- !u!64 &398018668
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2313,6 +2288,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a7f3aeb999d68540ac7f057d62ee327, type: 3}
   m_PrefabInstance: {fileID: 607723212}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &700404352
+GameObject:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 700404354}
+  - component: {fileID: 700404353}
+  m_Layer: 0
+  m_Name: PrefabPainterSceneSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &700404353
+MonoBehaviour:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700404352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0d71238b38a4a38b35b955fbf5c019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::nTools.PrefabPainter.PrefabPainterSceneSettings
+  parentForPrefabs: {fileID: 0}
+--- !u!4 &700404354
+Transform:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700404352}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &729664827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5405,7 +5425,15 @@ SceneRoots:
   - {fileID: 198044862}
   - {fileID: 1771422383}
   - {fileID: 2007725768}
+<<<<<<< HEAD
   - {fileID: 425940585}
   - {fileID: 868773053}
   - {fileID: 837511299}
   - {fileID: 67048134}
+=======
+  - {fileID: 863808342}
+  - {fileID: 121969164}
+  - {fileID: 259645386}
+  - {fileID: 458982518}
+  - {fileID: 700404354}
+>>>>>>> b4bc40fa9836787cc013d9191afaf729340e5489
