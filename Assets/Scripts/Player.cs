@@ -31,6 +31,12 @@ public class Player : MonoBehaviour
             GameManager.Instance.Shoot();
         }
 
+        if (Input.GetMouseButtonDown(0) && isBuilding)
+        {
+            Destroy(instance);
+            isBuilding = false;
+        }
+
         if (Input.GetMouseButtonDown(1)) {
             if (isBuilding) isBuilding = false;
             if (!isBuilding)

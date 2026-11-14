@@ -1661,7 +1661,7 @@ MonoBehaviour:
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
         placeEulerAngles: {x: 0, y: -30, z: 0}
-        placeScale: 0.2
+        placeScale: 0.1
         throwRadius: 5
         throwSpacing: 2
         throwHeight: 5
@@ -1910,7 +1910,7 @@ MonoBehaviour:
       selected: 0
       colorTag: 0
       customPreviewImage: {fileID: 0}
-    - name: grass
+    - name: Grass_02
       settings:
         brushRadius: 1
         brushSpacing: 0.5
@@ -1938,7 +1938,7 @@ MonoBehaviour:
         pinFixedRotationValue: {x: 0, y: 0, z: 0}
         pinFixedScale: 0
         pinFixedScaleValue: {x: 1, y: 1, z: 1}
-        placeEulerAngles: {x: 0, y: 0, z: 0}
+        placeEulerAngles: {x: 0, y: -15, z: 0}
         placeScale: 1
         throwRadius: 1
         throwSpacing: 1
@@ -2189,7 +2189,7 @@ MonoBehaviour:
         gridNormal: {x: 0, y: 1, z: 0}
         gridAngle: 0
       prefabSlots:
-      - gameObject: {fileID: 112622, guid: 061faed207d7a4b52b09b4f68119bae4, type: 3}
+      - gameObject: {fileID: 919132149155446097, guid: cb29e971b88d9034bb3fff6b3246dfcc, type: 3}
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
       - gameObject: {fileID: 0}
