@@ -2,24 +2,16 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public Camera camera;
     public float mouseSensitivity;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+    private float mouseX;
+    private float mouseY;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (Cursor.lockState == CursorLockMode.Locked) Cursor.lockState = CursorLockMode.None;
-            else Cursor.lockState = CursorLockMode.Locked;
-        }
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
 
-        //float xInput = Input.GetAxisHori
+        transform.Rotate(-mouseY * mouseSensitivity, mouseX * mouseSensitivity, 0);
     }
 }
