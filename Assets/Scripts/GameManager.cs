@@ -5,10 +5,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public GameObject ballPrefab;
     public GameObject player;
-    public float strength;
+    public float strength = 250f;
     public int score;
     public float time;
     public bool shooting;
+    private Camera playerCamera;
 
     private void Awake()
     {
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
         Physics.IgnoreLayerCollision(3, 6);
     }
 
+    private void Start()
+    {
+        playerCamera = player.GetComponentInChildren<Camera>();
+    }
+
     private void Update()
     {
         if (shooting) time = time + Time.deltaTime;
@@ -35,10 +41,8 @@ public class GameManager : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject newBall = Instantiate(ballPrefab);
-        newBall.transform.position = player.transform.position;
+        GameObject newBall = Instantiate(ballPrefab, playerCamera.transform.position + playerCamera.transform.forward.normalized, playerCamera.transform.rotation);
         Rigidbody rb = newBall.GetComponent<Rigidbody>();
-        Camera playerCamera = player.GetComponentInChildren<Camera>();
         Vector3 direction = playerCamera.transform.forward.normalized * strength;
         rb.AddForce(direction);
         time = 0;

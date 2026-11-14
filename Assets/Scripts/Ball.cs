@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 10f;
-
-    void Update()
+    private void Awake()
     {
-        transform.position += transform.forward * Time.deltaTime * speed;
+        GetComponent<Rigidbody>().useGravity = false;
     }
-    
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Finish"))
