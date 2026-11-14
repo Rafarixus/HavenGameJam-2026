@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
     public float speed = 5f;
     public bool canShoot;
+    public bool isBuilding;
     public float mouseSensitivity = 2f;
+    public GameObject prefab;
+    private GameObject instance;
 
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -14,14 +18,45 @@ public class Player : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        transform.position = GameManager.Instance.shootPosition.transform.position;
-        canShoot = true;
+        isBuilding = false;
     }
 
     private void Update()
     {
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
+
+        if (Input.GetMouseButtonDown(0) && canShoot && !isBuilding)
+        {
+            GameManager.Instance.Shoot();
+        }
+
+        if (Input.GetMouseButtonDown(1)) {
+            if (isBuilding) isBuilding = false;
+            if (!isBuilding)
+            {
+                canShoot = false;
+                isBuilding = true;
+                instance = Instantiate(prefab);
+            }
+        }
+
+        if (isBuilding)
+        {
+            Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                instance.transform.position = hit.point;
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0) && isBuilding)
+        {
+            isBuilding = false;
+            instance = null;
+        }
 
         if (vertical != 0 || horizontal != 0 || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.E))
         {
